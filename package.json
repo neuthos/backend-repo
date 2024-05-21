@@ -1,0 +1,39 @@
+{
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "technical test ebuddy company",
+  "main": "./core/app.js",
+  "scripts": {
+    "build": "rimraf dist && babel src --out-dir dist  --copy-files",
+    "start": "node dist/app.js",
+    "start:dev": "nodemon --exec babel-node core/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuthos/backend-repo.git"
+  },
+  "author": "Galang Ardian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neuthos/backend-repo/issues"
+  },
+  "homepage": "https://github.com/neuthos/backend-repo#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase": "^10.12.1",
+    "firebase-admin": "^12.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/node": "^7.23.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/register": "^7.23.7",
+    "nodemon": "^3.1.0",
+    "rimraf": "^5.0.7"
+  }
+}
