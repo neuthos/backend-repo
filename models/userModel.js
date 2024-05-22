@@ -1,17 +1,5 @@
 class User {
-  constructor(
-    id,
-    name,
-    email,
-    password,
-    age,
-    bio,
-    ethnicity,
-    height,
-    location,
-    availability,
-    services
-  ) {
+  constructor(id, name, email, age, bio, ethnicity, height) {
     this.id = id;
     this.name = name;
     this.email = email;
