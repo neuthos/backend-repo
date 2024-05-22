@@ -12,11 +12,31 @@ import {
 import successHandler from "../middleware/successHandler";
 import ApiError from "../entities/ApiError";
 
+export const getUserById = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const user = doc(db, "users", id);
+    const data = await getDoc(user);
+
+    if (!data.exists()) throw new ApiError(404, "User not found", {});
+
+    return successHandler(res, "User retrieved successfully", 200, data.data());
+  } catch (error) {
+    throw new ApiError(400, error.message, {});
+  }
+};
+
 export const createUser = async (req, res) => {
   try {
     const data = req.body;
-    await addDoc(collection(db, "users"), data);
-    return successHandler(res, "User created successfully", 201, null);
+    const newUser = await addDoc(collection(db, "users"), data);
+    const userDoc = doc(db, "users", newUser.id);
+    const user = await getDoc(userDoc);
+
+    return successHandler(res, "User created successfully", 201, {
+      id: newUser.id,
+      ...user.data(),
+    });
   } catch (error) {
     throw new ApiError(400, error.message, {});
   }
@@ -34,14 +54,7 @@ export const getUsers = async (req, res, next) => {
         userDoc.id,
         userDoc.data().name,
         userDoc.data().email,
-        userDoc.data().password,
-        userDoc.data().age,
-        userDoc.data().bio,
-        userDoc.data().ethnicity,
-        userDoc.data().height,
-        userDoc.data().location,
-        userDoc.data().availability,
-        userDoc.data().services
+        userDoc.data().bio
       );
       userArray.push(user);
     }
@@ -52,27 +65,19 @@ export const getUsers = async (req, res, next) => {
   }
 };
 
-export const getUserById = async (req, res, next) => {
-  try {
-    const id = req.params.id;
-    const user = doc(db, "users", id);
-    const data = await getDoc(user);
-
-    if (!data.exists()) throw new ApiError(404, "User not found", {});
-
-    return successHandler(res, "User retrieved successfully", 200, data.data());
-  } catch (error) {
-    throw new ApiError(400, error.message, {});
-  }
-};
-
 export const updateUser = async (req, res, next) => {
   try {
     const id = req.params.id;
     const data = req.body;
-    const product = doc(db, "users", id);
-    await updateDoc(product, data);
-    return successHandler(res, "User updated successfully", 200, null);
+    const userDoc = doc(db, "users", id);
+    await updateDoc(userDoc, data);
+
+    const updatedUser = await getDoc(userDoc);
+
+    return successHandler(res, "User updated successfully", 200, {
+      id,
+      ...updatedUser.data(),
+    });
   } catch (error) {
     throw new ApiError(400, error.message, error);
   }

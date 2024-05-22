@@ -2,7 +2,7 @@ import ApiError from "../entities/ApiError";
 import {verifyAccessToken} from "../utils/jwt";
 
 const authMiddleware = (req, _res, next) => {
-  const accessToken = req.headers.authorization;
+  const accessToken = req.headers.authorization.split(" ")[1];
   if (!accessToken) throw new ApiError(401, "access token required", {});
 
   try {

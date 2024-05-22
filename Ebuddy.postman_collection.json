@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "1bb178f3-de17-4781-9df9-a2ac7abc814f",
+		"name": "Ebuddy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14405527"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwicGFzc3dvcmQiOiJhZG1pbiJ9.uyWIOi18saI_q4pvI00JXx4ipBt4tVysac5DPEHzEOY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "416"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a0-4LedHOXfpzcKzciCn5cr1v6OFvE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 08:50:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Users retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"4w8XBsniyAJfOsLMRPPd\",\n            \"name\": \"si b\",\n            \"email\": \"b@mail.com\"\n        },\n        {\n            \"id\": \"QRX6uZnaLdeZY4pxgPt4\",\n            \"name\": \"mantap\",\n            \"email\": \"admin@mail.com\"\n        },\n        {\n            \"id\": \"WuzbLYMvzIuUh3wNgepa\",\n            \"name\": \"POPO\",\n            \"email\": \"a@Mail.com\"\n        },\n        {\n            \"id\": \"kxvfP5aGZ5LRzpbMcaD6\",\n            \"name\": \"Rafly\",\n            \"email\": \"rafly@mail.com\"\n        },\n        {\n            \"id\": \"lIWc5OExXM2Uh68l1eQa\",\n            \"name\": \"Baru\",\n            \"email\": \"baru@mail.com\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwicGFzc3dvcmQiOiJhZG1pbiJ9.uyWIOi18saI_q4pvI00JXx4ipBt4tVysac5DPEHzEOY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4w8XBsniyAJfOsLMRPPd",
+									"uuid": "efdb30b1-a3ff-4c4b-94cc-776a9af57b0f"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/users/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4w8XBsniyAJfOsLMRPPd"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "171"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ab-scyCL71v3mnHxFYIgXG/K+/5ubg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 08:51:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"User retrieved successfully\",\n    \"data\": {\n        \"email\": \"b@mail.com\",\n        \"age\": \"1888\",\n        \"ethnicity\": \"bbbb\",\n        \"height\": \"1888\",\n        \"name\": \"si b\",\n        \"bio\": \"bbb\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwicGFzc3dvcmQiOiJhZG1pbiJ9.uyWIOi18saI_q4pvI00JXx4ipBt4tVysac5DPEHzEOY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test\",\n    \"email\": \"p@mail.com\",\n    \"age\": 12,\n    \"bio\": \"123123123123123\",\n    \"ethnicity\": \"Asia\",\n    \"height\": 120\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Test\",\n    \"email\": \"p@mail.com\",\n    \"age\": 12,\n    \"bio\": \"123123123123123\",\n    \"ethnicity\": \"Asia\",\n    \"height\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-OGo3Lh19zW0bkoeQDlxs2gFxu+Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 08:57:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 201,\n    \"message\": \"User created successfully\",\n    \"data\": {\n        \"id\": \"JbN4q0IM3PnKJzFvAmFd\",\n        \"name\": \"Test\",\n        \"ethnicity\": \"Asia\",\n        \"height\": 120,\n        \"email\": \"p@mail.com\",\n        \"age\": 12,\n        \"bio\": \"123123123123123\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwicGFzc3dvcmQiOiJhZG1pbiJ9.uyWIOi18saI_q4pvI00JXx4ipBt4tVysac5DPEHzEOY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test\",\n    \"email\": \"1p@mail.com\",\n    \"age\": 12,\n    \"bio\": \"123123123123123\",\n    \"ethnicity\": \"Asia\",\n    \"height\": 120\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/JbN4q0IM3PnKJzFvAmFd",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"JbN4q0IM3PnKJzFvAmFd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Test\",\n    \"email\": \"1p@mail.com\",\n    \"age\": 12,\n    \"bio\": \"123123123123123\",\n    \"ethnicity\": \"Asia\",\n    \"height\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users/JbN4q0IM3PnKJzFvAmFd",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"JbN4q0IM3PnKJzFvAmFd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-wb9RnqLvUEqnaXUQX5aUV458Eog\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 08:58:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"User updated successfully\",\n    \"data\": {\n        \"id\": \"JbN4q0IM3PnKJzFvAmFd\",\n        \"ethnicity\": \"Asia\",\n        \"email\": \"1p@mail.com\",\n        \"bio\": \"123123123123123\",\n        \"height\": 120,\n        \"name\": \"Test\",\n        \"age\": 12\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwicGFzc3dvcmQiOiJhZG1pbiJ9.uyWIOi18saI_q4pvI00JXx4ipBt4tVysac5DPEHzEOY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/JbN4q0IM3PnKJzFvAmFd",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"JbN4q0IM3PnKJzFvAmFd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/users/JbN4q0IM3PnKJzFvAmFd",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"JbN4q0IM3PnKJzFvAmFd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-nGDdn7NKbuq+9etuY9gLLtzwYkY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 08:59:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"User deleted successfully\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@mail.com\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@mail.com\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "232"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e8-gC8zrL9FJr/SpZIHB+ASACFuuhY\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 May 2024 08:50:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"code\": 200,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwicGFzc3dvcmQiOiJhZG1pbiJ9.uyWIOi18saI_q4pvI00JXx4ipBt4tVysac5DPEHzEOY\",\n        \"email\": \"admin@mail.com\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "hosts",
+			"value": "http://localhost:3001/v1/api/update-firebase-doc",
+			"type": "string"
+		},
+		{
+			"key": "host",
+			"value": "http://localhost:3001/v1/api/update-firebase-doc"
+		}
+	]
+}
